@@ -1,0 +1,264 @@
+<html>
+<head>
+ 
+     <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script> 
+    <script src="https://unpkg.com/aframe-room-component/dist/aframe-room-component.min.js"></script>
+    
+</head>
+<body>
+    
+    
+    <a-scene>
+        
+ 
+      
+        
+        
+        
+      
+        
+        
+<a-plane rotation="-90 0 0" width="40" height="20"
+  src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/wood/hardwood2_roughness.jpg"></a-plane> 
+        
+        
+       
+        <a-assets></a-assets>
+       <a-entity>
+        <a-entity progressive-controls></a-entity>
+            <a-camera position=" 4 2.5 5">
+           <a-cursor color="red"></a-cursor>
+           </a-camera>
+           
+    
+                  
+          
+           
+         <!-- Code for black box -->   
+        <a-box 
+               src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/bricks/brick_roughness.jpg" position="2 3 -7"   scale="5 4.5 4.5" rotation="0 20 0">
+           
+           <a-animation attribute= "scale" repeat="indefinite" to="6 6 6" direction="alternate" dur="2500" easing="linear" > </a-animation>
+            <a-animation attribute="material.color" repeat="indefinite" to="black" from="#FF6628" dur="3000" easing="linear"></a-animation>
+             
+         
+           
+        
+    
+              
+        <a-entity id="box"> </a-entity>
+        
+        </a-entity>
+        
+   <!----
+          <a-box
+                 color="grey" position="15 5 -17" scale=".5 40 20"
+                 > 
+          
+              
+              
+              
+              </a-entity>
+        
+        
+        
+        </a-box>
+        
+    <!-- Code for big orange box -->
+         <a-box
+            src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/bricks/brick_bump.jpg" position="1.3 2 -9" rotation="0 20 0" scale="9 10 7" 
+                > 
+          
+        
+            <a-animation attribute= "scale" repeat="indefinite" to="4 4 4" direction="alternate" dur="2500"easing="linear"> </a-animation>
+             
+            <a-animation attribute="color" repeat="indefinite" to="#FF6628" from="black" dur="3000" easing="linear"></a-animation>
+           
+           
+           </a-box>
+        <a-entity light="type:point;castShadow:true; intensity: 1.2; distance: -50;"
+          position="0 10 10"
+                  ></a-entity>
+                
+     
+        
+    <!-- Code for right blue box -->    
+        <a-box
+            color="#288DFF" position="3 1 -3.1" rotation="0 0 0"
+scale=".5 .5 .5" height="4.2" width=".4" depth=.2>
+            <a-animation attribute="position" repeat="indefinite" to="3 2 -3.1" direction="alternate" begin="click" elasticity="600" easing="linear"
+                         ></a-animation>
+          
+            
+     
+            
+         
+        
+        </a-box>
+        <a-entity id="box"></a-entity>
+     
+    <!-- Code for right green box -->
+        <a-box
+            color="green" position="3.3 .5 -2.7" rotation="0 0 0"
+scale="1 1 1" height="2.5" width=".4" depth=.1>
+               <a-animation attribute="rotation" repeat="indefinite" to="0 180 0" begin="click" dur="3000" easing="linear"></a-animation>
+            
+            
+            <a-animation  attribute="rotation" begin="click" to="5 5 5"  >
+
+            </a-animation>
+            
+            
+         <a-animation attribute="color" repeat="indefinite" to="white" begin="mouseenter"from="green" dur="3000" easing="linear"></a-animation>
+            
+               </a-box>
+        <a-entity id="box"></a-entity>
+        
+    <!-- ANIMATION HERE!! Code for right white box -->
+        <a-box
+            color="white" position="2.3 .1 -3.4" rotation="0 0 0"
+scale="1.5 1.5 1.5" height="2.5" width=".4" depth=.1>
+            <a-animation attribute="rotation" begin="click" repeat="indefinite" to="0 180 0" dur="2500" easing="linear"></a-animation>
+              <a-animation attribute="color" repeat="indefinite" to="green" from="white" dur="3000" begin="click" easing="linear"></a-animation>
+            
+            </a-animation>
+
+        </a-box>
+        
+ 
+        
+    <!-- Code for small orange box -->    
+          <a-box
+               color="#FF6628"
+                 
+                 position="3.5 0.5 -2"
+               rotation="0 0 0" scale=".3 .3 .3" width="1" height="1" depth="2"> 
+     <a-animation attribute="position" begin="click" repeat="indefinite" to="5 0.5 -2" direction="alternate"
+                  ></a-animation>
+              <a-animation attribute="rotation" begin="click" repeat=indefinite to="0 180 0" direction="alternate" easing="linear"></a-animation>
+           
+        </a-box>
+                 
+                  
+        <a-entity id="box" material="color:yellow">
+        
+        </a-entity>
+       
+    <!-- Code for small yellow box -->
+        
+        <a-box
+               color="yellow" position="2.7 0.5 -2.3"
+               rotation="0 0 0" scale=".3 .3 .3" width="1.2" height="1" depth="2"> 
+            
+            <a-animation attribute="position" begin="click" repeat="indefinite" to="1 0.5 -2" direction="alternate"
+                  ></a-animation>
+             <a-animation attribute="rotation" begin="click" repeat=indefinite to="0 180 0" direction="alternate" easing="linear"></a-animation>
+           
+    </a-box>
+        <a-entity id="box" material="color:yellow"> </a-entity>
+    
+    <!-- Code for orange box on left -->
+        
+          <a-box
+            color="#FF6628" position="-3.6 .5 -3" rotation="0 0 0"
+scale="1 1 1" height="4.3" width=".9" depth=.1>
+            
+              <a-animation attribute="position" begin="mouseenter" to="-3 3 -3" repeat="indefinite" direction="alternate" > </a-animation>
+            <a-animation attribute="color"  to="#D3D3D3" from="#FF6628" dur="3000" repeat="indefinite" begin="mouseenter"></a-animation>
+              
+                        
+              
+              
+              
+              
+              </a-box>
+        <a-entity id="box"></a-entity>
+        
+    <!-- Code for left blue box -->
+        <a-box
+            color="#288DFF" position="-2.5 1 -2.6" rotation="0 0 0"
+scale=".5 .5 .5" height="4.2" width=".4" depth=.2>
+               <a-animation attribute="color" repeat="indefinite" to="#288DFF" from="white" dur="3000" begin="mouseenter"></a-animation>
+              </a-box>
+        <a-entity id="box" 
+                  ></a-entity>
+       
+              
+    <!-- Code for light grey box bottom -->
+        <a-box
+            color="#D3D3D3" position="-3 .5 -3.5" rotation="0 0 0"
+scale="1 1 1" height="4.3" width="1.5" depth=.1>
+              <a-animation attribute="position" begin="mouseenter" to="-1 -1 -1"
+                           repeat="indefinite" direction="alternate" > </a-animation>
+                    <a-animation attribute="color"  to="#FF6628" from="#D3D3D3" dur="3000" repeat="indefinite" begin="mouseenter"></a-animation>
+              
+
+             
+            
+            
+              </a-box>
+        <a-entity id="box"></a-entity>
+        
+     <!-- Code for transparent grey box at top -->   
+        <a-box
+            color="#A9A9A9" position="-2 5.5 -3.5" rotation="0 30 0"
+scale="1 1 1" height="" width="4" depth=.8 opacity=".4">
+    
+    <a-animation attribute="color" repeat="indefinite" from="#A9A9A9" to="white" dur="3000"></a-animation>
+    </a-box>
+        <a-entity id="box"></a-entity>
+       
+    
+    
+    
+    <!-- Code for green box top -->
+        <a-box
+            color="green" position="-3 4.5 -2" rotation="0 30 0"
+scale="1 1 1" height="2" width=".3" depth=.1> 
+            
+        <a-animation  attribute="position" repeat="indefinite" to="-3 7 -2"  dur="3000" begin="mouseenter" direction="alternate"
+                     ></a-animation> 
+    </a-box>
+        <a-entity id="box"></a-entity>
+    
+    
+    <!-- Code from left black box -->
+        <a-box
+            color="black" position="-2.7 3 -1" rotation="0 30 0"
+scale="1 1 1" height="2" width=".3" depth=.1> 
+            
+             <a-animation  attribute="position" repeat="indefinite" to="-2.7 4 -2"  dur="3000" begin="mouseenter" direction="alternate"> </a-animation>
+    
+    <!-- Code for top left yellow box -->
+        <a-box
+            color="yellow" position="0.2 1 -.5"
+               rotation="0 30 0" scale=".3 .3 .3" width="1" height="1" depth=".2"> </a-box>
+        <a-entity id="box" material="color:yellow"> </a-entity>
+    
+    <!-- Code for top orange box -->
+            <a-box
+            color="#FF6628" position="2 5.5 -5" rotation="0 30 0"
+                   scale="1 1 0" height="1.5" width="4" depth=.1>
+                   
+            <a-animation attribute="scale" to="2 2 2" begin="mouseenter"></a-animation>  
+          
+                
+        <a-entity 
+                  text="value: Welcome to my animated verson of Bryce Hudson's Untitled Composition #38! Use the red cursor and click around to see more animations!; color:black"
+        position="1 3 -1" 
+                  scale="8 8 8" font-type: helvetica rotation="30 10 10"
+                  ></a-entity>
+       
+                
+             
+
+        </a-box>
+        
+            </a-scene>
+    
+    </body>
+    
+
+
+
+</html>
